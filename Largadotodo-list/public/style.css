@@ -1,0 +1,250 @@
+/* Add Task Button */
+button.add-task {
+    background: #00eaff;
+    box-shadow: 0px 0px 15px rgba(0, 234, 255, 0.8);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #003344;
+}
+
+button.add-task:hover {
+    background: #00bfff;
+    box-shadow: 0px 0px 25px rgba(0, 191, 255, 1);
+}
+
+/* Complete Task Button */
+button.complete-task {
+    background: #00ff44;
+    box-shadow: 0px 0px 15px rgba(0, 255, 68, 0.8);
+    font-weight: bold;
+    color: #003300;
+}
+
+button.complete-task:hover {
+    background: #00cc33;
+    box-shadow: 0px 0px 25px rgba(0, 204, 51, 1);
+}
+
+/* Delete Task Button */
+button.delete-task {
+    background: #ff0033;
+    box-shadow: 0px 0px 15px rgba(255, 0, 51, 0.8);
+    font-weight: bold;
+    color: #330000;
+}
+
+button.delete-task:hover {
+    background: #cc0022;
+    box-shadow: 0px 0px 25px rgba(204, 0, 34, 1);
+}
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;400;600&display=swap');
+
+/* Global Styling */
+body {
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #00fff7;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(180deg, #0d0d0d, #1b1b1b);
+}
+body {
+    overflow: hidden;
+}
+body {
+    overflow-y: auto;
+}
+body {
+    overflow: auto;
+}
+
+
+/* 3D Animated Background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(20, 20, 30, 0.9) 10%, rgba(10, 10, 20, 1) 90%);
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,0,0,0) 30%, rgba(0,255,255,0.1) 70%);
+    animation: rotateBG 15s infinite linear;
+    z-index: -1;
+}
+
+@keyframes rotateBG {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Title */
+h1 {
+    font-size: 3rem;
+    color: #00fff7;
+    text-shadow: 0 0 40px rgba(0, 255, 255, 1);
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Flicker Animation */
+@keyframes flicker {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+/* Form Input */
+input[type="text"] {
+    width: 40%;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: 2px solid #00fff7;
+    border-radius: 12px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00fff7;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+}
+
+input[type="text"]::placeholder {
+    color: rgba(0, 255, 255, 0.6);
+}
+
+input[type="text"]:focus {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 50px rgba(0, 255, 255, 0.8);
+}
+
+/* Task List */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Individual Task Items */
+li {
+    padding: 15px;
+    margin: 15px auto;
+    width: 60%;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.3);
+    border: 2px solid #00fff7;
+}
+
+/* Neon Glow Hover Effect */
+li:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px rgba(0, 255, 255, 0.8);
+}
+
+/* Robotic-Themed Tasks */
+li:nth-child(4n + 1) { /* AI Core */
+    background: linear-gradient(135deg, #002b36 30%, #004056 90%);
+    border-left: 6px solid #00aaff;
+    color: #b3e5fc;
+}
+
+li:nth-child(4n + 2) { /* Cybernetic */
+    background: linear-gradient(135deg, #2b0036 30%, #56004e 90%);
+    border-left: 6px solid #ff00ff;
+    color: #f0e6ff;
+}
+
+li:nth-child(4n + 3) { /* Quantum */
+    background: linear-gradient(135deg, #363600 30%, #565600 90%);
+    border-left: 6px solid #ffff00;
+    color: #fffbe6;
+}
+
+li:nth-child(4n) { /* Mechanized */
+    background: linear-gradient(135deg, #003600 30%, #005600 90%);
+    border-left: 6px solid #00ff00;
+    color: #e6ffde;
+}
+
+/* Completed Task */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.4;
+    color: #00ffa2;
+}
+
+/* Button Effects */
+button:hover {
+    transform: scale(1.15);
+}
+
+/* AI Core Button */
+button.ai-core {
+    background: #00aaff;
+    box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.7);
+}
+
+/* Cybernetic Button */
+button.cyber {
+    background: #ff00ff;
+    box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.7);
+}
+
+/* Quantum Button */
+button.quantum {
+    background: #ffff00;
+    box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.7);
+}
+
+/* Mechanized Button */
+button.mechanized {
+    background: #00ff00;
+    box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.7);
+}
+
+/* Animations */
+@keyframes robotic-glow {
+    0% { box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5); }
+    100% { box-shadow: 0px 0px 25px rgba(0, 255, 255, 1); }
+}
+
+@keyframes robotic-pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.02); }
+}
+
+@keyframes glitch {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, -2px); }
+    80% { transform: translate(2px, 2px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Glitch Effect on Title */
+h1 {
+    animation: glitch 0.3s infinite alternate;
+}
